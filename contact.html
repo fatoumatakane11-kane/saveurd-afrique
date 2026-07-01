@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saveurs d'Afrique - Contact</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Arial, sans-serif;}
+body { background:#f8f8f8; color:#333; line-height:1.6; }
+.container { width:100%; max-width:1200px; margin:0 auto; padding:0 20px; }
+
+/* HEADER */
+header { background:#F7F1E0; padding:15px 0; box-shadow:0 2px 10px rgba(0,0,0,0.3); position:fixed; width:100%; top:0; z-index:1000; }
+nav { display:flex; justify-content:space-between; align-items:center; }
+.nav-links { display:flex; list-style:none; }
+.nav-links li { margin-left:20px; }
+.nav-links a { text-decoration:none; padding:10px 18px; border-radius:50px; font-weight:bold; color:#fff; background:#802f17; transition:0.3s; }
+.nav-links a:hover, .nav-links a.active { background:#ff751f; }
+
+/* CONTACT SECTION */
+.contact-section { padding-top:180px; padding-bottom:60px; background:#F7F1E0; }
+.contact-grid { display:flex; flex-wrap:wrap; gap:40px; }
+.form-container, .info-container { flex:1; min-width:320px; background:#fff; padding:30px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.15); }
+.form-container h2 { margin-bottom:10px; color:#802f17; }
+.form-container h3 { font-size:18px; margin-top:20px; margin-bottom:10px; color:#802f17; border-left:4px solid #ff751f; padding-left:10px; }
+form input, form textarea, form select { width:100%; padding:12px 14px; margin-bottom:15px; border:1px solid #ddd; border-radius:10px; font-size:15px; transition:all 0.3s ease; }
+form input:focus, form textarea:focus, form select:focus { border-color:#ff751f; box-shadow:0 0 6px rgba(255,117,31,0.4); outline:none; }
+form button { padding:12px 30px; border:none; border-radius:12px; background:linear-gradient(45deg,#802f17,#ff751f); color:#fff; font-weight:bold; cursor:pointer; transition:all 0.3s ease; }
+form button:hover { transform:scale(1.05); box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+
+/* ACCORDÉON MENU */
+.accordion { margin-bottom:15px; border:1px solid #ddd; border-radius:10px; overflow:hidden; }
+.accordion-header { background:#ff751f; color:#fff; padding:12px 15px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:bold; }
+.accordion-content { display:none; padding:10px; background:#fff; }
+.accordion-content label { display:flex; align-items:center; justify-content:space-between; padding:6px 10px; border-bottom:1px solid #eee; cursor:pointer; }
+.accordion-content label img { width:50px; height:50px; object-fit:cover; border-radius:8px; margin-right:10px; }
+.accordion-content label span { flex:1; margin-left:10px; }
+
+/* Infos Contact */
+.contact-info-section p { font-size:16px; line-height:1.8; display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+.contact-info-section i { color:#ff751f; font-size:18px; }
+
+/* Carte */
+#map { width:100%; height:350px; border-radius:12px; margin-top:15px; }
+
+/* FOOTER */
+footer { background:#1b1b1b; color:#ddd; padding:60px 20px; }
+.footer-content { display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; }
+.footer-section { flex:1; min-width:250px; }
+.footer-section h3 { font-size:20px; color:#ff751f; margin-bottom:15px; text-transform:uppercase; }
+.footer-links, .contact-info { list-style:none; }
+.footer-links li, .contact-info li { margin-bottom:10px; }
+.footer-links a { color:#ddd; text-decoration:none; }
+.footer-links a:hover { color:#ff751f; }
+.social-icons { margin-top:15px; }
+.social-icons a { color:#ddd; margin-right:15px; font-size:20px; transition:0.3s; }
+.social-icons a:hover { color:#ff751f; }
+
+/* Responsive */
+@media(max-width:992px){.contact-grid{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo"><img src="image/1-removebg-preview.png" alt="Logo" width="100px"></div>
+<ul class="nav-links">
+<li><a href="index.html">ACCUEIL</a></li>
+<li><a href="menu.html">MENU</a></li>
+<li><a href="apropos.html">À PROPOS</a></li>
+<li><a href="contact.html" class="active">CONTACT</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="contact-section">
+<div class="container contact-grid">
+
+<!-- Formulaire -->
+<div class="form-container">
+<h2>CONTACT / RÉSERVATION</h2>
+<p>Remplissez le formulaire pour réserver ou nous envoyer un message.</p>
+
+<form>
+<h3>Vos informations</h3>
+<input type="text" name="prenom" placeholder="Prénom" required>
+<input type="text" name="nom" placeholder="Nom" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
+<input type="text" name="adresse" placeholder="Adresse" required>
+
+<h3>Détails de la réservation</h3>
+<input type="date" name="date" required>
+<input type="time" name="heure" required>
+<input type="number" name="personnes" placeholder="Nombre de personnes" min="1" required>
+
+<h3>Message</h3>
+<textarea name="message" rows="4" placeholder="Votre message ou demande spéciale"></textarea>
+
+<button type="submit">Réserver</button>
+</form>
+</div>
+
+<!-- Infos Contact -->
+<div class="info-container">
+<h2>NOS INFORMATIONS</h2>
+<div class="contact-info-section">
+<p><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Almadies, Dakar, Sénégal</p>
+<p><i class="fas fa-phone-alt"></i> <strong>Téléphone :</strong> +221 77 123 45 67</p>
+<p><i class="fas fa-envelope"></i> <strong>Email :</strong> contact@saveursafrique.sn</p>
+<p><i class="fas fa-clock"></i> <strong>Horaires :</strong> Lun-Sam 10h-22h</p>
+</div>
+
+<!-- Carte sans API -->
+<iframe
+  id="map"
+  src="https://maps.google.com/maps?q=Almadies%20Dakar%20Senegal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  width="100%"
+  height="350"
+  style="border:0; border-radius:12px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>À PROPOS DE NOUS</h3>
+<p>Saveurs d’Afrique vous offre une expérience culinaire unique.</p>
+</div>
+<div class="footer-section">
+<h3>LIENS RAPIDES</h3>
+<ul class="footer-links">
+<li><a href="index.html">ACCUEIL</a></li>
+<li><a href="menu.html">MENU</a></li>
+<li><a href="apropos.html">À PROPOS</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>CONTACT</h3>
+<ul class="contact-info">
+<li><i class="fas fa-map-marker-alt"></i> Almadies, Dakar, Sénégal</li>
+<li><i class="fas fa-phone-alt"></i> +221 77 123 45 67</li>
+<li><i class="fas fa-envelope"></i> contact@saveursafrique.sn</li>
+</ul>
+<div class="social-icons">
+<a href="https://web.facebook.com/?locale=fr_FR&_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+<a href="https://www.linkedin.com/in/TON_PROFIL_ICI"><i class="fab fa-linkedin"></i></a>
+
+</div>
+<p style="margin-top:10px; font-size:14px;">&copy; 2025 Saveurs d’Afrique. Tous droits réservés.</p>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Accordéon
+const accHeaders = document.querySelectorAll('.accordion-header');
+accHeaders.forEach(header => {
+  header.addEventListener('click', ()=>{
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+const form = document.querySelector('form'); // Sélectionne le formulaire
+const confirmationDiv = document.createElement('div'); // Crée un div pour le message
+confirmationDiv.style.marginTop = '15px';
+confirmationDiv.style.color = 'green';
+confirmationDiv.style.fontWeight = 'bold';
+form.parentNode.appendChild(confirmationDiv); // Ajoute le div après le formulaire
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Empêche l'envoi réel du formulaire
+  const prenom = form.prenom.value;
+  confirmationDiv.textContent = `Merci ${prenom} ! Votre réservation a été envoyée avec succès.`;
+  form.reset(); // Réinitialise le formulaire
+});
+</script>
+
+</body>
+</html>

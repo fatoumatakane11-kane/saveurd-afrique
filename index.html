@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saveurs d'Afrique - Restaurant</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* NAVIGATION */
+nav {
+  display:flex;
+  justify-content:space-between; /* logo à gauche, liens à droite */
+  align-items:center;            /* aligné verticalement */
+  padding:10px 20px;
+  flex-wrap:nowrap;              /* NE PAS passer à la ligne */
+  overflow-x:auto;               /* scroll horizontal si trop petit */
+  -webkit-overflow-scrolling: touch; /* fluide sur mobile */
+}
+
+/* LOGO */
+.logo {
+  flex-shrink:0;  /* le logo ne rétrécit pas */
+}
+
+/* LIENS DE NAVIGATION */
+.nav-links {
+  display:flex;
+  flex-direction:row;
+  list-style:none;
+  gap:10px;
+  margin:0;
+  padding:0;
+  flex-shrink:0; /* empêche la réduction des boutons */
+}
+
+.nav-links li a {
+  text-decoration:none;
+  padding:8px 16px;
+  border-radius:50px;
+  font-weight:bold;
+  color:#fff;
+  background:#802f17;
+  transition:0.3s;
+  display:block;
+  white-space:nowrap; /* pas de retour à la ligne dans les boutons */
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background:#ff751f;
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <img src="image/1-removebg-preview.png" alt="" width="120px">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" >ACCUEIL</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="apropos.html">À PROPOS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-left">
+    <h3>BIENVENUE CHEZ SAVEURS D'AFRIQUE</h3>
+    <p>Découvrez une cuisine africaine authentique, préparée avec passion 
+      et revisitée avec une touche moderne. Que vous soyez amateur de plats 
+traditionnels ou en quête de nouvelles saveurs, notre équipe
+ vous fera voyager au cœur de l’Afrique.</p>
+    <a href="contact.html" class="btn"><span>RÉSERVER UNE TABLE <span class="arrow">→</span></span></a>
+  </div>
+</section>
+
+<!-- À propos -->
+<section class="about">
+  <div class="about-text">
+    <h2>À PROPOS</h2>
+    <p>Chez <strong>Saveurs d’Afrique</strong>, nous marions traditions africaines et techniques modernes pour offrir des plats raffinés et savoureux. Notre chef <strong>Cuisto</strong> transforme chaque 
+        ingrédient en une expérience sensorielle, fidèle à nos valeurs d’authenticité et de qualité. <br></p>
+    <a href="apropos.html" class="btn"><span>EN SAVOIR PLUS <span class="arrow">→</span></span></a>
+  </div>
+  <div class="about-img">
+    <img src="image/WhatsApp_Image_2025-09-30_at_16.35.26-removebg-preview.png" alt="Chef Cristo">
+  </div>
+</section>
+
+<!-- Spécialités -->
+<section class="specialties">
+  <h2>NOS SPÉCIALITÉS</h2>
+  <div class="specialty-cards">
+    <div class="card">
+      <img src="image/WhatsApp Image 2025-10-01 at 14.04.03.jpeg">
+      <h3>DES ENTRÉES APPETISSANTS</h3>
+      <p>Dégustez des plats typiques d’Afrique préparés avec passion et authenticité.</p>
+    </div>
+    <div class="card">
+      <img src="image/Riz_poisson.jpeg">
+      <h3>DES PLATS SAINS</h3>
+      <p>Nos recettes sont élaborées avec des produits locaux et frais pour un goût incomparable.</p>
+    </div>
+    <div class="card">
+      <img src="image/chocolat.jpg">
+      <h3>PETITS DOUCEURS POUR FINIR</h3>
+      <p>Découvrez nos douceurs africaines revisitées, un vrai plaisir pour les gourmets.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Témoignages -->
+<section class="testimonials">
+  <h2>TÉMOIGNAGES</h2>
+  <div class="testimonial-cards">
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="client-avatar">AL</div>
+        <div class="client-name">Alima L.</div>
+      </div>
+      <p class="testimonial-text">Une expérience inoubliable! Les saveurs sont authentiques et raffinées.</p>
+      <p class="testimonial-details">Dakar, Sénégal</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="client-avatar">MK</div>
+        <div class="client-name">Mamadou K.</div>
+      </div>
+      <p class="testimonial-text">Chaque plat est un voyage en Afrique. Service impeccable et cadre magnifique.</p>
+      <p class="testimonial-details">Dakar, Sénégal</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="client-avatar">SR</div>
+        <div class="client-name">Sira R.</div>
+      </div>
+      <p class="testimonial-text">Les desserts sont incroyables! Un vrai mélange de tradition et modernité.</p>
+      <p class="testimonial-details">Dakar, Sénégal</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>À PROPOS DE NOUS</h3>
+<p>Saveurs d’Afrique vous offre une expérience culinaire unique.</p>
+</div>
+<div class="footer-section">
+<h3>LIENS RAPIDES</h3>
+<ul class="footer-links">
+<li><a href="index.html">ACCUEIL</a></li>
+<li><a href="menu.html">MENU</a></li>
+<li><a href="apropos.html">À PROPOS</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>CONTACT</h3>
+<ul class="contact-info">
+<li><i class="fas fa-map-marker-alt"></i> Almadies, Dakar, Sénégal</li>
+<li><i class="fas fa-phone-alt"></i> +221 77 123 45 67</li>
+<li><i class="fas fa-envelope"></i> contact@saveursafrique.sn</li>
+</ul>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+<p style="margin-top:10px; font-size:14px;">&copy; 2025 Saveurs d’Afrique. Tous droits réservés.</p>
+</div>
+</div>
+</div>
+</footer>
+
+
+<div class="copyright">
+  <div class="container">
+    &copy; 2025 Saveurs d'Afrique. Tous droits réservés.
+  </div>
+</div>
+
+<script>
+  // Accordéon
+const accHeaders = document.querySelectorAll('.accordion-header');
+accHeaders.forEach(header => {
+  header.addEventListener('click', ()=>{
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.card, .testimonial-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(card);
+  });
+});
+
+</script>
+
+</body>
+</html>
